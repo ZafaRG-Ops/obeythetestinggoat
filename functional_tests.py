@@ -28,6 +28,11 @@ class NewVisitorTest(unittest.TestCase):
             'Enter a to-do item'
         )
 
+        self.assertTrue(
+        	any(row.text == '1: Buy peacock feathers' for row in rows),
+        	"New to-do item did not appear in table"
+    	)
+
         # She types "Buy peacock feathers" into a text box (Edith's hobby
         # is tying fly-fishing lures)
         inputbox.send_keys('Buy peacock feathers')  
