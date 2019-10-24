@@ -28,11 +28,6 @@ class NewVisitorTest(unittest.TestCase):
             'Enter a to-do item'
         )
 
-        self.assertTrue(
-        	any(row.text == '1: Buy peacock feathers' for row in rows),
-        	"New to-do item did not appear in table"
-    	)
-
         # She types "Buy peacock feathers" into a text box (Edith's hobby
         # is tying fly-fishing lures)
         inputbox.send_keys('Buy peacock feathers')  
@@ -53,6 +48,16 @@ class NewVisitorTest(unittest.TestCase):
         # methodical)
         self.fail('Finish the test!')
 
+        # The page updates again, and now shows both items on her list
+
+		# Edith wonders whether the site will remember her list. Then she sees
+		# that the site has generated a unique URL for her -- there is some
+		# explanatory text to that effect.
+
+		# She visits that URL - her to-do list is still there.
+
+		# Satisfied, she goes back to sleep
+
 
 if __name__ == '__main__':  
-    unittest.main(warnings='ignore')
+    unittest.main(warnings='ignore') 
