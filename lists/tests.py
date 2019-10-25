@@ -12,3 +12,5 @@ class HomePageTest(TestCase):
 		self.assertIn('A new list item', response.content.decode())
 		self.assertTemplateUsed(response, 'home.html')
 		​self.assertIn('1: Buy peacock feathers', [row.text for row in rows]
+
+    def test_can_start_a_list_and_retrieve_it_later(self):
